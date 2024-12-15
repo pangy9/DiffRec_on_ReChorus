@@ -3,14 +3,19 @@
 这是中山大学人工智能专业的大三机器学习大作业项目：在[ReChorus](https://github.com/THUwangcy/ReChorus)框架上复现一篇近期的顶会论文，我们选取的论文是[Diffusion Recommender Model](https://arxiv.org/abs/2304.04971)，代码参考了它的[公开仓库](https://github.com/YiyanXu/DiffRec?tab=readme-ov-file)
 
 ## 目录
-
+- [代码简单说明](#代码简单说明)
 - [安装与运行](#安装与运行)
 - [致谢](#致谢)
 - [许可证](#许可证)
 
 ---
+## 代码简单说明
+- 在 `main.py` 基础上编写了 `diffrec_main.py`
+- 编写了`DiffRec.py`、`LDiffRec.py`、`TDiffRec.py`、`LTDiffRec.py`。
+- 在`BaseReader.py`基础上编写了`myReader.py`
+- 在`BaseRunner.py`基础上编写了`myRunner.py`
 
-
+  
 ## 安装与运行
 
 ### 依赖要求
@@ -44,4 +49,4 @@ bash my_new_scripts/DiffRec.sh
 
 ## 许可证
 
-本项目基于 [ReChorus](https://github.com/THUwangcy/ReChorus)，原始项目使用 [MIT 许可证](https://github.com/THUwangcy/ReChorus/blob/master/LICENSE)。 
+本项目基于 [ReChorus](https://github.com/THUwangcy/ReChorus)，原始项目使用 MIT 许可证。 
