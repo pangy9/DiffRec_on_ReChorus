@@ -127,7 +127,6 @@ class myRunner(object):
 		self.epoch = args.epoch
 		self.check_epoch = args.check_epoch
 		self.test_epoch = args.test_epoch
-		# self.eval_epoch = args.eval_epoch
 		self.early_stop = args.early_stop
 		self.learning_rate = args.lr
 		self.batch_size = args.batch_size
