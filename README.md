@@ -21,6 +21,8 @@ GPU 型号：单张 NVIDIA GeForce RTX 4090.
 
 操作系统：Ubuntu 20.04; CUDA 版本：12.1; Python 版本：3.10.14.
 
+注意：预处理数据集在lease处获取
+
 创建虚拟环境后，运行
 ```
 pip install -r requirements.txt
