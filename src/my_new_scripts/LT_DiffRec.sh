@@ -1,9 +1,6 @@
 cuda=1
 path=../my_dataset
 
-dataset="MovieLens_clean"
-# dataset="AmazonBook_clean"
-# dataset="Grocery_and_Gourmet_Food_clean"
 lr1=0.0005
 lr2=5e-05
 wd1=0.0
@@ -25,6 +22,15 @@ reweight=1
 w_min=0.5
 w_max=1.0
 
+dataset="MovieLens_clean"
+random_seed=0
+
+# dataset="AmazonBook_clean"
+# random_seed=42
+
+# dataset="Grocery_and_Gourmet_Food_clean"
+# random_seed=42
+
 emb_path="${path}/${dataset}/item_emb.npy"
 CUDA_VISIBLE_DEVICES=${cuda} python diffrec_main.py \
     --path="${path}" \
@@ -40,7 +46,7 @@ CUDA_VISIBLE_DEVICES=${cuda} python diffrec_main.py \
     --wd1=${wd1} \
     --wd2=${wd2} \
     --batch_size=${batch_size} \
-    --eval_batch_size=${batch_size} \
+    --eval_batch_size=400 \
     --n_cate=${n_cate} \
     --in_dims=${in_dims} \
     --out_dims=${out_dims} \
@@ -59,6 +65,7 @@ CUDA_VISIBLE_DEVICES=${cuda} python diffrec_main.py \
     --num_neg 0\
     --w_min=${w_min} \
     --w_max=${w_max} \
+    --random_seed ${random_seed}
     # --topk 10,20,50,100 \
     # --main_metric "Recall@20" \
     # --metric "DIFFREC"
